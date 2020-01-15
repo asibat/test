@@ -1,0 +1,13 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js: "6"
+install:
+  - npm ci
+script:
+  - npm test
+after_success:
+  - npm run-script semantic-release
+test.dot: just a value
+test_special_chars: aValue*WithAsterix
+test*special_chars2: another value
